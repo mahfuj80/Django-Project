@@ -2,17 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
+def dashboard(request):
+        return render(request, 'dashboard.html',)
 def home(request):
-        # return HttpResponse("Hello Bangladesh")
-        text = {'name': 'Arafat','course': 'Django'}
-        return render(request, 'index.html', text)
+        return render(request, 'home.html',)
+def blog(request):
+        return render(request, 'blog.html',)
+def about(request):
+        return render(request, 'about.html',)
+def contact(request):
+        return render(request, 'contact.html',)
 
-def shop(request):
-        return HttpResponse("Welcome to My Shop")
-
-def add(request):
-        val1 = int(request.POST['num1'])
-        val2 = int(request.POST['num2'])
-        values  = val1 + val2
-
-        return render(request, 'result.html',{'result': values})
