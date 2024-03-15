@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nongare Hub Shop</title>
+  </head>
+  <body>
+    {% extends "contract.html" %} {%block content%}
+    <h1>This course Tech you {{ name }}</h1>
+    <p>{{name}} will teaching you {{ course }}</p>
+
+    <form action="add" method="POST">
+      {% csrf_token%} Enter 1st Number:
+      <input type="text" name="num1" /> <br />
+      Enter 2nd Number:
+      <input type="text" name="num2" /> <br />
+      <input type="submit" />
+    </form>
+    {%endblock%}
+  </body>
+</html>
